@@ -1,0 +1,1415 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* line 8, ../scss/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, ../scss/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 31, ../scss/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 50, ../scss/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 61, ../scss/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, ../scss/_normalize.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 79, ../scss/_normalize.scss */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 92, ../scss/_normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 102, ../scss/_normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 115, ../scss/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 125, ../scss/_normalize.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 134, ../scss/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 143, ../scss/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 152, ../scss/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 161, ../scss/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 170, ../scss/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 179, ../scss/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187, ../scss/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 191, ../scss/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 202, ../scss/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 210, ../scss/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 222, ../scss/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 234, ../scss/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 243, ../scss/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 257, ../scss/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 269, ../scss/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 278, ../scss/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 288, ../scss/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 299, ../scss/_normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 310, ../scss/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 322, ../scss/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 333, ../scss/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 346, ../scss/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, ../scss/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, ../scss/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, ../scss/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, ../scss/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 397, ../scss/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 406, ../scss/_normalize.scss */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 416, ../scss/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* line 8, ../scss/app-core.scss */
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #0c0c0c;
+  position: relative;
+  top: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* line 19, ../scss/app-core.scss */
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* line 24, ../scss/app-core.scss */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  cursor: hand;
+}
+/* line 31, ../scss/app-core.scss */
+a:hover, a:active, a:visited {
+  text-decoration: none;
+  cursor: hand;
+}
+
+/* line 37, ../scss/app-core.scss */
+.main-view footer a, .main-view.login > form a.rounded, .main-view.pin > form a.rounded, .main-view.login > form .form-field input {
+  display: inline-block;
+  width: 75%;
+  height: auto;
+  padding: 1rem 2.5rem;
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+}
+/* line 48, ../scss/app-core.scss */
+.main-view footer a::after, .main-view.login > form a.rounded::after, .main-view.pin > form a.rounded::after, .main-view.login > form .form-field input::after {
+  content: "";
+  display: inline-block;
+  clear: both;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-size: 100%;
+  top: 1.25rem;
+  right: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+/* line 62, ../scss/app-core.scss */
+.main-view footer a {
+  background-color: #F4CC6A;
+  color: #0c0c0c;
+}
+
+/* line 68, ../scss/app-core.scss */
+.main-view.login > form a.rounded, .main-view.pin > form a.rounded {
+  background-color: #0c0c0c;
+  color: #F4CC6A;
+}
+
+/* line 74, ../scss/app-core.scss */
+.main-view.splash > picture, .main-view.login > picture, .main-view.pin > picture {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+/* line 80, ../scss/app-core.scss */
+.main-view.splash > picture img.logo, .main-view.login > picture img.logo, .main-view.pin > picture img.logo {
+  width: 50%;
+  max-width: 16rem;
+  height: auto;
+  display: inline-block;
+}
+
+/* line 88, ../scss/app-core.scss */
+.main-view.dashboard, .main-view.profile, .main-view.contacts-list {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-image: none;
+}
+/* line 94, ../scss/app-core.scss */
+.main-view.dashboard > header, .main-view.profile > header, .main-view.contacts-list > header {
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0c0c0c;
+}
+/* line 103, ../scss/app-core.scss */
+.main-view.dashboard > header > a, .main-view.profile > header > a, .main-view.contacts-list > header > a {
+  display: inline-block;
+  width: 10%;
+  height: 90%;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center center;
+}
+/* line 112, ../scss/app-core.scss */
+.main-view.dashboard > header > a.call-link, .main-view.profile > header > a.call-link, .main-view.contacts-list > header > a.call-link {
+  background-image: url("../images/dashboard/call-icon.png");
+}
+/* line 116, ../scss/app-core.scss */
+.main-view.dashboard > header > a.config-link, .main-view.profile > header > a.config-link, .main-view.contacts-list > header > a.config-link {
+  background-image: url("../images/dashboard/settings.png");
+}
+/* line 120, ../scss/app-core.scss */
+.main-view.dashboard > header > a.nav-link, .main-view.profile > header > a.nav-link, .main-view.contacts-list > header > a.nav-link {
+  background-image: url("../images/profile/menu-icon.png");
+}
+/* line 124, ../scss/app-core.scss */
+.main-view.dashboard > header > a:first-of-type, .main-view.profile > header > a:first-of-type, .main-view.contacts-list > header > a:first-of-type {
+  margin-left: 3%;
+}
+/* line 127, ../scss/app-core.scss */
+.main-view.dashboard > header > a:last-of-type, .main-view.profile > header > a:last-of-type, .main-view.contacts-list > header > a:last-of-type {
+  margin-right: 3%;
+}
+/* line 132, ../scss/app-core.scss */
+.main-view.dashboard > header > h4, .main-view.profile > header > h4, .main-view.contacts-list > header > h4 {
+  display: inline-block;
+  width: 70%;
+  color: white;
+  text-align: center;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.1rem;
+  font-weight: normal;
+  position: relative;
+  top: -0.7rem;
+}
+/* line 146, ../scss/app-core.scss */
+.main-view.dashboard > .scroller, .main-view.profile > .scroller, .main-view.contacts-list > .scroller {
+  width: 100%;
+  height: 100%;
+  margin-top: 3.2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 153, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section, .main-view.profile > .scroller > section, .main-view.contacts-list > .scroller > section {
+  width: 100%;
+  height: auto;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+}
+/* line 159, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section::after, .main-view.profile > .scroller > section::after, .main-view.contacts-list > .scroller > section::after {
+  content: '';
+  width: 100%;
+  height: 4rem;
+  display: block;
+}
+
+/* line 169, ../scss/app-core.scss */
+aside.menu .scroller ul li a .list-icon, .main-view.profile > .scroller > section .list-icon {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.65rem;
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  background-color: #F4CC6A;
+  margin-right: 1rem;
+  text-align: center;
+  position: relative;
+}
+/* line 180, ../scss/app-core.scss */
+aside.menu .scroller ul li a .list-icon img, .main-view.profile > .scroller > section .list-icon img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+
+/* line 187, ../scss/app-core.scss */
+aside {
+  width: 80%;
+  height: 100%;
+  background-color: #eee;
+  border-right: 1px solid rgba(102, 102, 104, 0.5);
+  padding: 0.5rem;
+  z-index: 100000000;
+  box-shadow: -10px 0 5px -5px rgba(102, 102, 104, 0.25);
+}
+/* line 196, ../scss/app-core.scss */
+aside .scroller {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* line 206, ../scss/app-core.scss */
+aside.menu .scroller header {
+  display: block;
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  -moz-border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  border-radius: 0.6rem;
+}
+/* line 215, ../scss/app-core.scss */
+aside.menu .scroller header img {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-block;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+}
+/* line 224, ../scss/app-core.scss */
+aside.menu .scroller header h4 {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  margin-left: 5rem;
+  margin-right: 4rem;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #666668;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 1rem;
+}
+/* line 239, ../scss/app-core.scss */
+aside.menu .scroller header > a {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center center;
+  background-image: url("../images/menu/arrow.png");
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
+/* line 254, ../scss/app-core.scss */
+aside.menu .scroller ul {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  -moz-border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  border-radius: 0.6rem;
+  margin-top: 0.5rem;
+}
+/* line 265, ../scss/app-core.scss */
+aside.menu .scroller ul li {
+  width: 100%;
+  font-size: 0.9rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(102, 102, 104, 0.05);
+  color: rgba(12, 12, 12, 0.8);
+}
+/* line 273, ../scss/app-core.scss */
+aside.menu .scroller ul li a {
+  width: 100%;
+  display: inline-block;
+}
+/* line 281, ../scss/app-core.scss */
+aside.menu .scroller ul li a p {
+  padding: 0;
+  margin: 0;
+}
+/* line 286, ../scss/app-core.scss */
+aside.menu .scroller ul li:last-of-type {
+  border-bottom: 0;
+}
+/* line 294, ../scss/app-core.scss */
+aside.sort-popup {
+  background-color: #F4CC6A;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+/* line 299, ../scss/app-core.scss */
+aside.sort-popup .scroller {
+  padding-top: 1rem;
+}
+/* line 302, ../scss/app-core.scss */
+aside.sort-popup .scroller header {
+  width: 100%;
+  height: auto;
+  min-height: 5rem;
+  position: relative;
+  display: block;
+}
+/* line 309, ../scss/app-core.scss */
+aside.sort-popup .scroller header > span {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  position: absolute;
+}
+/* line 315, ../scss/app-core.scss */
+aside.sort-popup .scroller header > span a {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* line 320, ../scss/app-core.scss */
+aside.sort-popup .scroller header > span a img {
+  width: 100%;
+  height: 100%;
+}
+/* line 326, ../scss/app-core.scss */
+aside.sort-popup .scroller header > span.close-icon {
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+}
+/* line 332, ../scss/app-core.scss */
+aside.sort-popup .scroller header > span.sort-icon {
+  right: 0;
+  top: 0.75rem;
+}
+/* line 340, ../scss/app-core.scss */
+aside.sort-popup .scroller h4 {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+/* line 352, ../scss/app-core.scss */
+aside.sort-popup .scroller h4 > span {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 0.6rem;
+  position: relative;
+  top: -0.1rem;
+}
+/* line 361, ../scss/app-core.scss */
+aside.sort-popup .scroller ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+/* line 366, ../scss/app-core.scss */
+aside.sort-popup .scroller ul li {
+  width: 100%;
+  min-height: 2rem;
+  margin-bottom: 0.8rem;
+  background-color: #E5B962;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+/* line 373, ../scss/app-core.scss */
+aside.sort-popup .scroller ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0.6rem 1rem;
+}
+/* line 380, ../scss/app-core.scss */
+aside.sort-popup .scroller ul li a.drop-down {
+  width: 100%;
+  position: relative;
+}
+/* line 384, ../scss/app-core.scss */
+aside.sort-popup .scroller ul li a.drop-down::after {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../images/new-inspection/details-icon.png");
+}
+
+/* line 405, ../scss/app-core.scss */
+.main-view {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("../images/landing/bg.png") no-repeat;
+  background-size: cover;
+  /*border: 2px solid red;*/
+}
+/* line 413, ../scss/app-core.scss */
+.main-view footer {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  text-align: center;
+}
+/* line 22, ../scss/_app_mixins.scss */
+.main-view footer:before, .main-view footer:after {
+  content: "";
+  display: table;
+}
+/* line 27, ../scss/_app_mixins.scss */
+.main-view footer:after {
+  clear: both;
+}
+/* line 425, ../scss/app-core.scss */
+.main-view footer a {
+  text-align: left;
+  vertical-align: middle;
+}
+/* line 430, ../scss/app-core.scss */
+.main-view footer a::after {
+  background-image: url("../images/landing/arrow.png");
+}
+/* line 436, ../scss/app-core.scss */
+.main-view.splash {
+  text-align: center;
+}
+/* line 439, ../scss/app-core.scss */
+.main-view.splash > picture {
+  position: relative;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+/* line 449, ../scss/app-core.scss */
+.main-view.login > picture {
+  height: 35%;
+  top: 4rem;
+}
+/* line 458, ../scss/app-core.scss */
+.main-view.login > form {
+  display: block;
+  width: 100%;
+  height: 65%;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 4rem;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+}
+/* line 468, ../scss/app-core.scss */
+.main-view.login > form .form-field {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* line 475, ../scss/app-core.scss */
+.main-view.login > form .form-field input {
+  width: 100%;
+  text-transform: none;
+  font-variant: normal;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-align: left;
+  border: 2px solid rgba(102, 102, 104, 0.01);
+  background-color: rgba(102, 102, 104, 0.05);
+  padding: 1.2rem;
+  padding-left: 2.5rem;
+}
+/* line 489, ../scss/app-core.scss */
+.main-view.login > form .form-field::after {
+  display: inline-block;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  -moz-border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  border-radius: 3rem;
+  position: absolute;
+  right: 0;
+  top: -0.2rem;
+  background-color: #F4CC6A;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center center;
+}
+/* line 506, ../scss/app-core.scss */
+.main-view.login > form #staffId-field::after {
+  background-image: url("../images/login/staff-id-icon.png");
+}
+/* line 512, ../scss/app-core.scss */
+.main-view.login > form #password-field::after {
+  background-size: 40%;
+  background-image: url("../images/login/passwprd-icon.png");
+}
+/* line 518, ../scss/app-core.scss */
+.main-view.login > form a {
+  font-size: 0.8rem;
+  color: #666668;
+}
+/* line 522, ../scss/app-core.scss */
+.main-view.login > form a.rounded {
+  width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  margin-bottom: 1.5rem;
+}
+/* line 529, ../scss/app-core.scss */
+.main-view.login > form a.rounded::after {
+  background-image: url("../images/menu/arrow.png");
+  background-size: 60%;
+}
+/* line 538, ../scss/app-core.scss */
+.main-view.pin {
+  width: 100%;
+}
+/* line 541, ../scss/app-core.scss */
+.main-view.pin > picture {
+  height: 35%;
+  top: 4rem;
+}
+/* line 550, ../scss/app-core.scss */
+.main-view.pin > form {
+  display: block;
+  width: 100%;
+  height: 65%;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 3.5rem;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+}
+/* line 560, ../scss/app-core.scss */
+.main-view.pin > form > header {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.5rem;
+}
+/* line 565, ../scss/app-core.scss */
+.main-view.pin > form > header h2 {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  padding: 0;
+  margin: 0;
+  color: rgba(12, 12, 12, 0.9);
+  font-weight: normal;
+  letter-spacing: 0.13rem;
+}
+/* line 572, ../scss/app-core.scss */
+.main-view.pin > form > header h5 {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  color: rgba(102, 102, 104, 0.4);
+  letter-spacing: 0.05rem;
+  margin-top: 0.4rem;
+}
+/* line 582, ../scss/app-core.scss */
+.main-view.pin > form .form-field {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 2.5rem;
+  display: table;
+}
+/* line 589, ../scss/app-core.scss */
+.main-view.pin > form .form-field input {
+  display: table-cell;
+  width: 22%;
+  height: 5rem;
+  margin-right: 4%;
+  text-align: center;
+  border: 2px solid rgba(102, 102, 104, 0.01);
+  background-color: rgba(102, 102, 104, 0.05);
+  padding: 1.2rem 2%;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+/* line 601, ../scss/app-core.scss */
+.main-view.pin > form .form-field input:last-of-type {
+  margin-right: 0;
+}
+/* line 607, ../scss/app-core.scss */
+.main-view.pin > form a {
+  font-size: 0.8rem;
+  color: #666668;
+}
+/* line 611, ../scss/app-core.scss */
+.main-view.pin > form a.rounded {
+  width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  margin-bottom: 1.5rem;
+}
+/* line 618, ../scss/app-core.scss */
+.main-view.pin > form a.rounded::after {
+  background-image: url("../images/menu/arrow.png");
+  background-size: 60%;
+}
+/* line 634, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section {
+  width: 100%;
+}
+/* line 637, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+/* line 643, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header h4 {
+  display: inline-block;
+  width: 100%;
+  font-weight: normal;
+  letter-spacing: 0.15rem;
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  padding: 0.8rem;
+  background-color: rgba(102, 102, 104, 0.1);
+  text-align: center;
+  position: relative;
+}
+/* line 656, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header h4::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  padding: 0.2rem;
+  background-color: #2EB23A;
+  background-image: url("../images/dashboard/location-icon.png");
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border-radius: 2rem;
+  top: 0;
+  left: 0;
+}
+/* line 672, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header h4.header-link {
+  position: relative;
+}
+/* line 675, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header h4.header-link #penalty-count {
+  color: #F4CC6A;
+  z-index: 1000;
+  position: absolute;
+  left: 1.25rem;
+  top: 0.6rem;
+  font-size: 1.2rem;
+}
+/* line 684, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header h4.header-link a {
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+/* line 690, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header h4.header-link a::after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-size: 60%;
+  background-image: url("../images/landing/arrow.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0.1rem;
+  right: -0.5rem;
+}
+/* line 704, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section > header h4.header-link::before {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.2rem;
+  background-color: #0c0c0c;
+  background-image: none;
+  -moz-border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  border-radius: 3rem;
+  top: -0.3rem;
+  z-index: 0;
+}
+/* line 718, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents {
+  width: 100%;
+  height: auto;
+  min-height: 20rem;
+}
+/* line 723, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row {
+  width: 100%;
+  display: block;
+  height: 8rem;
+  margin-bottom: 1rem;
+}
+/* line 22, ../scss/_app_mixins.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row:before, .main-view.dashboard > .scroller > section .user-contents > .table-row:after {
+  content: "";
+  display: table;
+}
+/* line 27, ../scss/_app_mixins.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row:after {
+  clear: both;
+}
+/* line 730, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row > div {
+  display: block;
+  width: 48%;
+  height: 100%;
+  margin-right: 4%;
+  text-align: center;
+  float: left;
+}
+/* line 738, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row > div a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: rgba(102, 102, 104, 0.05);
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 1.2rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: rgba(12, 12, 12, 0.8);
+  letter-spacing: 0.05rem;
+}
+/* line 751, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row > div a > span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+/* line 756, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row > div a > span:last-of-type {
+  display: block;
+}
+/* line 761, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row > div a > .icon {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #F4CC6A;
+  -moz-border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  border-radius: 3rem;
+  margin-bottom: 0.5rem;
+}
+/* line 770, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row > div a > .icon img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/* line 778, ../scss/app-core.scss */
+.main-view.dashboard > .scroller > section .user-contents > .table-row > div:last-of-type {
+  margin-right: 0;
+}
+/* line 795, ../scss/app-core.scss */
+.main-view.profile > .scroller > section {
+  width: inherit;
+  padding: 1rem;
+}
+/* line 799, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > picture {
+  display: block;
+  height: auto;
+  min-height: 7rem;
+  text-align: center;
+  position: relative;
+}
+/* line 806, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > picture img {
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(102, 102, 104, 0.02);
+  border: 1px solid rgba(102, 102, 104, 0.1);
+  -moz-border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  border-radius: 10rem;
+}
+/* line 815, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > header {
+  text-align: center;
+  background-color: rgba(102, 102, 104, 0.05);
+  padding: 1rem 0.3rem;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+/* line 822, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > header h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+/* line 829, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > header h5 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.4rem;
+  color: rgba(12, 12, 12, 0.7);
+}
+/* line 844, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(102, 102, 104, 0.05);
+  padding: 1rem;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+}
+/* line 851, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > ul li {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.1rem;
+}
+/* line 855, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > ul li p {
+  display: inline-block;
+  width: auto;
+}
+/* line 859, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > ul li p span {
+  display: block;
+}
+/* line 862, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > ul li p span:first-of-type {
+  position: relative;
+  top: 0.2rem;
+  font-size: 0.9rem;
+}
+/* line 868, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > ul li p span:last-of-type {
+  color: rgba(102, 102, 104, 0.6);
+  font-size: 0.7rem;
+  top: 0.2rem;
+  position: relative;
+}
+/* line 879, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > .summary {
+  background-color: rgba(102, 102, 104, 0.05);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+}
+/* line 22, ../scss/_app_mixins.scss */
+.main-view.profile > .scroller > section > .summary:before, .main-view.profile > .scroller > section > .summary:after {
+  content: "";
+  display: table;
+}
+/* line 27, ../scss/_app_mixins.scss */
+.main-view.profile > .scroller > section > .summary:after {
+  clear: both;
+}
+/* line 886, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > .summary > div {
+  width: 33%;
+  float: left;
+  text-align: center;
+  border-left: 1px solid rgba(102, 102, 104, 0.05);
+}
+/* line 892, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > .summary > div .list-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 0;
+}
+/* line 898, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > .summary > div h3, .main-view.profile > .scroller > section > .summary > div h5 {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  padding-top: 0.3rem;
+}
+/* line 904, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > .summary > div h3 {
+  letter-spacing: 0.12rem;
+  font-size: 1.6rem;
+  padding-top: 0.7rem;
+  color: rgba(12, 12, 12, 0.7);
+}
+/* line 911, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > .summary > div h5 {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 0.7rem;
+  color: rgba(102, 102, 104, 0.8);
+}
+/* line 917, ../scss/app-core.scss */
+.main-view.profile > .scroller > section > .summary > div:first-of-type {
+  border-left: 0;
+}
+/* line 933, ../scss/app-core.scss */
+.main-view.contacts-list > .scroller > section {
+  width: inherit;
+  padding: 1rem;
+}

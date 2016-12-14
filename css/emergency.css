@@ -1,0 +1,313 @@
+.f-2x {
+    font-size: 2em;
+}
+
+.f-3x {
+    font-size: 3em;
+}
+
+.f-4x {
+    font-size: 4em;
+}
+
+.f-5x {
+    font-size: 5em;
+}
+
+.f-6x {
+    font-size: 6em;
+}
+
+.f-7x {
+    font-size: 7em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col-flow {
+    width: 100% !important;
+}
+
+.col-flow a {
+    text-align: left !important;
+}
+
+.list-head {
+    color: darkgray;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.list-details {
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.rounded-icon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    overflow: hidden;
+    background-color: #F4CC6A;
+}
+
+.rounded-icon img {
+    height: 17px !important;
+}
+
+.inspection-name {
+    font-size: 1.5em;
+    display: block;
+}
+
+.inspection-padding {
+    padding: 10px 5px 10px 10px;
+}
+
+.newinspection-header {
+    font-size: 1.7em;
+    text-align: center;
+    margin: 30px 0 20px !important;
+}
+
+.photo-wrapper, .div-grey-rounded {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+}
+
+.form-control {
+    border: none;
+    width: 100%;
+    padding-left: 10px !important;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .icon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+    z-index: 10;
+    margin-top: 7.5px;
+    margin-right: 5px;
+    color: darkgray;
+}
+
+/* align icon */
+.left-addon .icon {
+    left: 0px;
+}
+
+.right-addon .icon {
+    right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
+
+.input-lg {
+    height: 60px !important;
+    padding: 10px 16px !important;
+    font-size: 18px !important;
+    line-height: 1.3333333 !important;
+}
+
+.button-rounded {
+    border-radius: 25px !important;
+}
+
+.button-evis {
+    border-radius: 25px !important;
+    background-color: #0c0c0c;
+    color: #F4CC6A;
+    letter-spacing: 3px;
+}
+
+.outstanding {
+    /*background-image: url(../images/inspection/car.jpg) !important;
+    background-size: cover;*/
+    background: #fff url(../images/inspection/carbg.jpg) 0 0/100% no-repeat !important;
+}
+
+.main-view.outstanding {
+    background-color: white;
+}
+
+.main-view.outstanding > .scroller > section > header h4 {
+    background-color: rgba(100, 100, 100, 0.8);
+    color: white;
+}
+
+.margin-top-40 {
+    margin-top: 40%;
+}
+
+.outstanding-wrapper {
+    background-color: #F7F7F7;
+}
+
+.div-rounded {
+    border-radius: 10px;
+    /*padding: 10px;*/
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.wrapper-underlined {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.list-frame2{
+    background: #333;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px;
+    color: white;
+}
+
+.f-warning {
+    color: #dbb75f;
+}
+
+.divider{
+    border-right: 1px solid #ddd;
+}
+
+.bg-black {
+    background-color: #333 !important;
+}
+.bg-gray{
+    background-color: #ccc !important;
+}
+.vehicle-identification-name {
+    font-size: 1.3em;
+    display: block;
+}
+
+.question-select{
+    background-color: #F4CC6A;
+    height: 40px;
+}
+.vehicle-identification-bottom .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #F4CC6A;
+    -moz-border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    border-radius: 3rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+.vehicle-identification-bottom .icon  img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.text-light{
+    color: #999;
+}
+.text-sm{
+    font-size: 0.7em;
+    line-height: 1.2;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.block{
+    display: block;
+}
+.strong{
+    font-weight: bold;
+}
+
+.text-muted{
+    color: #999;
+}
+
+.mynotification-nav{
+    display: inline-block;
+    width: 100%;
+    font-weight: normal;
+    letter-spacing: 0.15rem;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    background-color: rgba(102, 102, 104, 0.1);
+    text-align: center;
+    position: relative;
+}
+.mynotification-nav :first-child{
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.mynotification-nav :last-child{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+.tiny-text{
+    font-size: 11px;
+    color: #9d9a9a;
+}
+
+.mynotification-img-div{
+    background-color: #FFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    align-items: center;
+}
+
+.date-circle{
+    background: #f2f2f2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.contact-search{
+    display: inline-block;
+    font-weight: normal;
+    letter-spacing: 0.15rem;
+    -moz-border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    border-radius: 2rem;
+    font-size: 0.7rem !important;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    padding: 0.8rem !important;
+    background-color: rgba(102, 102, 104, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.red-circle{
+    background: #e21313;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding-bottom: 10px;
+}

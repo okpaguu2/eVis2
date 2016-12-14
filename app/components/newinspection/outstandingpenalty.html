@@ -1,0 +1,94 @@
+<ion-view>
+    <article class="main-view dashboard outstanding">
+        <app-header page-title="New Inspection" left-icon=""/>
+        <div class="scroller">
+            <section>
+                <header>
+                    <h4>Outstanding Penalty</h4>
+                </header>
+                <div class="outstanding-wrapper margin-top-40 div-rounded card text-left">
+                    <div class="row">
+                        <div class="col">
+                            <div class="">
+                                <div class="row row-center">
+                                    <div class="col col-20">
+                                        <div class="image-frame div-rounded padding" style="background-color: #F4CC6A;">
+                                            <img src="images/dashboard/profile-icon.png" style="width:100%;"/>
+                                        </div>
+                                    </div>
+                                    <div class="col col-80">
+                                        <div class="row">
+                                            <div class="col wrapper-underlined">
+                                                <span class="inspection-name">{{$ctrl.currentInspection.firstname}} {{$ctrl.currentInspection.lastname}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="list-head">Contact</span>
+                                                <span class="list-details">{{$ctrl.currentInspection.phoneNo}}</span>
+                                            </div>
+                                            <div class="col">
+                                                <span class="list-head">RegNo</span>
+                                                <span class="list-details">{{$ctrl.currentInspection.regNo}}</span>
+                                            </div>
+                                            <div class="col">
+                                                <span class="list-head">Car</span>
+                                                <span class="list-details">{{$ctrl.currentInspection.car}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outstanding-wrapper div-rounded card text-center">
+                    <div class="row">
+                        <div class="col divider">
+                            <span class="list-head">DRIVER'S LICENSE</span>
+                            <span class="fa-stack fa-lg">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col divider">
+                            <span class="list-head">Hackney Permit</span>
+                            <span class="fa-stack fa-lg f-warning">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col divider">
+                            <span class="list-head">Vehicle Insurance</span>
+                            <span class="fa-stack fa-lg">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col">
+                            <span class="list-head">MOT Certificate</span>
+                            <span class="fa-stack fa-lg">
+                              <i class="fa fa-circle fa-stack-2x"></i>
+                              <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form class="form" action="#" method="post">
+                            <select type="text" class="question-select form-control input-lg padding-right" id="carRegNo">
+                                <option value="">Vehicle Type</option>
+                                <option ng-repeat="vehicleType in $ctrl.vehicleTypes" value="{{vehicleType.code}}">
+                                    {{vehicleType.label}}
+                                </option>
+                            </select>
+                            <a ui-sref="inspecting"
+                               class="button button-dark button-evis button-block icon-right ion-android-arrow-forward">CONTINUE</a>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+</ion-view>

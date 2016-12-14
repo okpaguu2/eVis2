@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.evis.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>eVis App</name>
+  <description>
+    Vehicle Inspection
+  </description>
+  <author email="bkadduch@gmail.com" href="http://example.com.com/">
+    Uchenna Okpagu
+  </author>
+  <content src="index.html"/>
+  <access launch-external="yes" origin="tel:*"/>
+  <access launch-external="yes" origin="geo:*"/>
+  <access launch-external="yes" origin="mailto:*"/>
+  <access launch-external="yes" origin="sms:*"/>
+  <access launch-external="yes" origin="market:*"/>
+  <allow-navigation href="http://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="geo:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="market:*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="SplashScreenDelay" value="5000"/>
+  <preference name="FadeSplashScreenDuration" value="5000"/>
+  <preference name="SplashMaintainAspectRatio" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <feature name="StatusBar">
+    <param name="ios-package" onload="true" value="CDVStatusBar"/>
+  </feature>
+  
+
+<icon src="icon.png" /> 
+
+
+  <platform name="browser">
+    <preference name="SplashScreen" value="/img/splash.jpg"/>
+    <preference name="SplashScreenDelay" value="3000"/>
+    <preference name="SplashScreenBackgroundColor" value="green"/>
+    <preference name="ShowSplashScreen" value="false"/>
+    <preference name="SplashScreenWidth" value="600"/>
+    <preference name="SplashScreenHeight" value="300"/>
+  </platform>
+  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+</widget>

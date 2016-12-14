@@ -1,0 +1,941 @@
+@import "compass";
+@import "susy";
+@import "susy-config";
+@import "normalize";
+@import "app_variables";
+@import "app_mixins";
+
+body, html {
+  width: 100%;
+  height: 100%;
+  @include zero-padding-margin;
+  background-color: $black;
+  position: relative;
+  top: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+*{
+  box-sizing: border-box;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  cursor: hand;
+
+  &:hover, &:active, &:visited {
+    text-decoration: none;
+    cursor: hand;
+  }
+}
+
+%rounded {
+  display: inline-block;
+  width: 75%;
+  height: auto;
+  padding: 1rem 2.5rem;
+  @include border-radius(2rem);
+  border: 1px solid transparent;
+  @include small-caps;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    clear: both;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-size: 100%;
+    top: 1.25rem;
+    right: 2.5rem;
+    background-repeat: no-repeat;
+  }
+}
+
+%yellow-rounded {
+  @extend %rounded;
+  background-color: $yellow;
+  color: $black;
+}
+
+%dark-rounded {
+  @extend %rounded;
+  background-color: $black;
+  color: $yellow;
+}
+
+%logo-view{
+    display: block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    img.logo {
+      width: 50%;
+      max-width: 16rem;
+      height: auto;
+      display: inline-block;
+    }
+}
+
+%app-view {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  background-image: none;
+
+  > header, app-header > header {
+    width: 100%;
+    height: 3.2rem;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $black;
+
+    > a {
+      display: inline-block;
+      width: 10%;
+      height: 90%;
+      @include zero-padding-margin;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: center center;
+
+      &.call-link {
+        background-image: url("../images/dashboard/call-icon.png");
+      }
+
+      &.config-link {
+        background-image: url("../images/dashboard/settings.png");
+      }
+
+      &.nav-link{
+        background-image: url("../images/profile/menu-icon.png");
+      }
+
+      &:first-of-type {
+        margin-left: 3%;
+      }
+      &:last-of-type {
+        margin-right: 3%;
+      }
+    }
+
+    > h4 {
+      display: inline-block;
+      width: 70%;
+      color: white;
+      text-align: center;
+      @include small-caps;
+      @include zero-padding-margin;
+      letter-spacing: 0.1rem;
+      font-weight: normal;
+      position: relative;
+      top: -0.7rem;
+    }
+  }
+
+  > .scroller{
+    width: 100%;
+    height: 100%;
+    margin-top: 3.2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    > section {
+      width: 100%;
+      height: auto;
+      padding-left: 7.5%;
+      padding-right: 7.5%;
+
+      &::after{
+        content: '';
+        width: 100%;
+        height: 4rem;
+        display: block;
+      }
+    }
+  }
+}
+
+%list-icon{
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.65rem;
+  @include border-radius(2.5rem);
+  background-color: $yellow;
+  margin-right: 1rem;
+  text-align: center;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 100%;
+    @include center-vertical();
+  }
+}
+
+aside{
+  width: 80%;
+  height: 100%;
+  background-color: #eee;
+  border-right: 1px solid rgba($grey, 0.5);
+  padding: 0.5rem;
+  z-index: 100000000;
+  box-shadow: -10px 0 5px -5px rgba($grey, 0.25);
+
+  .scroller{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &.menu{
+    .scroller{
+
+      header{
+        display: block;
+        width: 100%;
+        height: 4rem;
+        padding: 0.5rem;
+        background-color: rgba($white, 0.7);
+        border: 1px solid rgba($white, 0.8);
+        @include border-radius(0.6rem);
+
+        img{
+          height: 2.5rem;
+          width: 2.5rem;
+          display: inline-block;
+          position: absolute;
+          left: 0.5rem;
+          top: 0.75rem;
+        }
+
+        h4{
+          width: 100%;
+          display: inline-block;
+          position: relative;
+          margin-left: 5rem;
+          margin-right: 4rem;
+          font-weight: normal;
+          font-size: 0.9rem;
+          color: $grey;
+          @include zero-padding-margin;
+          text-align: center;
+          vertical-align: middle;
+          padding-top: 1rem;
+        }
+
+        > a{
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          @include zero-padding-margin;
+          background-repeat: no-repeat;
+          background-size: 60%;
+          background-position: center center;
+          background-image: url("../images/menu/arrow.png");
+          position: absolute;
+          right: 1rem;
+          top: 1.5rem;
+        }
+      }
+
+      ul{
+        width: 100%;
+        height: auto;
+        @include zero-padding-margin;
+        list-style-type: none;
+        padding: 0.5rem;
+        background-color: rgba($white, 0.7);
+        border: 1px solid rgba($white, 0.8);
+        @include border-radius(0.6rem);
+        margin-top: 0.5rem;
+
+        li{
+          width: 100%;
+          font-size: 0.9rem;
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+          border-bottom: 1px solid rgba($grey, 0.05);
+          color: rgba($black, 0.8);
+
+          a{
+            width: 100%;
+            display: inline-block;
+
+            .list-icon{
+              @extend %list-icon;
+            }
+
+            p{
+              @include zero-padding-margin;
+            }
+          }
+
+          &:last-of-type{
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.sort-popup{
+    background-color: $yellow;
+    padding-left: 2rem;
+    padding-right: 1rem;
+
+    .scroller{
+      padding-top: 1rem;
+
+      header{
+        width: 100%;
+        height: auto;
+        min-height: 5rem;
+        position: relative;
+        display: block;
+
+        > span{
+          width: 1.25rem;
+          height: 1.25rem;
+          display: inline-block;
+          position: absolute;
+
+          a{
+            width: 100%;
+            height: 100%;
+            @include zero-padding-margin;
+
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &.close-icon{
+            left: 0;
+            width: 3rem;
+            height: 3rem;
+          }
+
+          &.sort-icon{
+            right: 0;
+            top: 0.75rem;
+          }
+        }
+
+      }
+
+      h4{
+        width: 100%;
+        height: auto;
+        display: block;
+        font-size: 0.9rem;
+        font-weight: normal;
+        letter-spacing: 0.2rem;
+        @include small-caps;
+        color: $white;
+        margin-bottom: 1.5rem;
+        position: relative;
+
+        >span{
+          display: inline-block;
+          margin-right: 0.5rem;
+          font-size: 0.6rem;
+          position: relative;
+          top: -0.1rem;
+        }
+      }
+
+      ul{
+        width: 100%;
+        @include zero-padding-margin;
+        list-style-type: none;
+
+        li{
+          width: 100%;
+          min-height: 2rem;
+          margin-bottom: 0.8rem;
+          background-color: $dark-yellow;
+          @include border-radius(0.5rem);
+
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0.6rem 1rem;
+
+            &.drop-down{
+              width: 100%;
+              position: relative;
+
+              &::after{
+                content: '';
+                display: inline-block;
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                right:  0.8rem;
+                top: 0.8rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-image: url("../images/new-inspection/details-icon.png");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-view {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("../images/landing/bg.png") no-repeat;
+  background-size: cover;
+  border: 2px solid red;
+
+  footer {
+    display: block;
+    @include clearfix;
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    text-align: center;
+
+    a {
+      @extend %yellow-rounded;
+      text-align: left;
+      vertical-align: middle;
+
+      &::after {
+        background-image: url("../images/landing/arrow.png");
+      }
+    }
+  }
+
+  &.splash {
+    text-align: center;
+
+    > picture {
+      @extend %logo-view;
+      @include center-vertical();
+
+      img.logo {
+      }
+    }
+  }
+
+  &.login {
+    > picture {
+      @extend %logo-view;
+      height: 35%;
+      top: 4rem;
+
+      img.logo {
+      }
+    }
+
+    > form {
+      display: block;
+      width: 100%;
+      height: 65%;
+      background-color: $white;
+      text-align: center;
+      padding-top: 4rem;
+      padding-left: 12.5%;
+      padding-right: 12.5%;
+
+      .form-field {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        input {
+          @extend %rounded;
+          width: 100%;
+          text-transform: none;
+          font-variant: normal;
+          font-size: 0.9rem;
+          display: inline-block;
+          text-align: left;
+          border: 2px solid rgba($grey, 0.01);
+          background-color: rgba($grey, 0.05);
+          padding: 1.2rem;
+          padding-left: 2.5rem;
+        }
+
+        &::after {
+          display: inline-block;
+          content: "";
+          width: 4rem;
+          height: 4rem;
+          @include border-radius(3rem);
+          position: absolute;
+          right: 0;
+          top: -0.2rem;
+          background-color: $yellow;
+          background-repeat: no-repeat;
+          background-size: 50%;
+          background-position: center center;
+        }
+      }
+
+      #staffId-field {
+        &::after {
+          background-image: url("../images/login/staff-id-icon.png");
+        }
+      }
+
+      #password-field {
+        &::after {
+          background-size: 40%;
+          background-image: url("../images/login/passwprd-icon.png");
+        }
+      }
+
+      a {
+        font-size: 0.8rem;
+        color: $grey;
+
+        &.rounded {
+          width: 100%;
+          @extend %dark-rounded;
+          text-align: left;
+          vertical-align: middle;
+          margin-bottom: 1.5rem;
+
+          &::after {
+            background-image: url("../images/menu/arrow.png");
+            background-size: 60%;
+          }
+        }
+      }
+    }
+  }
+
+  &.pin {
+    width: 100%;
+
+    > picture {
+      @extend %logo-view;
+      height: 35%;
+      top: 4rem;
+
+      img.logo {
+      }
+    }
+
+    > form {
+      display: block;
+      width: 100%;
+      height: 65%;
+      background-color: $white;
+      text-align: center;
+      padding-top: 3.5rem;
+      padding-left: 12.5%;
+      padding-right: 12.5%;
+
+      > header {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2.5rem;
+
+        h2 {
+          @include small-caps;
+          @include zero-padding-margin;
+          color: rgba($black, 0.9);
+          font-weight: normal;
+          letter-spacing: 0.13rem;
+        }
+        h5 {
+          @include small-caps;
+          @include zero-padding-margin;
+          font-weight: normal;
+          color: rgba($grey, 0.4);
+          letter-spacing: 0.05rem;
+          margin-top: 0.4rem;
+        }
+      }
+
+      .form-field {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 2.5rem;
+        display: table;
+
+        input {
+          display: table-cell;
+          width: 22%;
+          height: 5rem;
+          margin-right: 4%;
+          text-align: center;
+          border: 2px solid rgba($grey, 0.01);
+          background-color: rgba($grey, 0.05);
+          padding: 1.2rem 2%;
+          @include border-radius(0.5rem);
+          font-size: 1.4rem;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+
+      a {
+        font-size: 0.8rem;
+        color: $grey;
+
+        &.rounded {
+          width: 100%;
+          @extend %dark-rounded;
+          text-align: left;
+          vertical-align: middle;
+          margin-bottom: 1.5rem;
+
+          &::after {
+            background-image: url("../images/menu/arrow.png");
+            background-size: 60%;
+          }
+        }
+      }
+    }
+  }
+
+  &.dashboard {
+    @extend %app-view;
+
+    > header {
+    }
+
+    > .scroller{
+      > section {
+        width: 100%;
+
+        > header{
+          width: 100%;
+          text-align: center;
+          margin-bottom: 1rem;
+          margin-top: 1rem;
+
+          h4{
+            display: inline-block;
+            width: 100%;
+            font-weight: normal;
+            letter-spacing: 0.15rem;
+            @include border-radius(2rem);
+            font-size: 0.7rem;
+            @include small-caps;
+            padding: 0.8rem;
+            background-color: rgba($grey, 0.1);
+            text-align: center;
+            position: relative;
+
+            &::before{
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              padding: 0.2rem;
+              background-color: #2EB23A;
+              background-image: url("../images/dashboard/location-icon.png");
+              background-size: 60%;
+              background-position: center center;
+              background-repeat: no-repeat;
+              position: absolute;
+              @include border-radius(2rem);
+              top:0;
+              left:0;
+            }
+
+            &.header-link{
+              position: relative;
+
+              #penalty-count{
+                color: $yellow;
+                z-index: 1000;
+                position: absolute;
+                left: 1.25rem;
+                top:0.6rem;
+                font-size: 1.2rem;
+              }
+
+              a{
+                @include zero-padding-margin;
+                width: 90%;
+                font-size: 1rem;
+                padding-left: 1rem;
+
+                &::after{
+                  content: '';
+                  width: 1rem;
+                  height: 1rem;
+                  background-size: 60%;
+                  background-image: url("../images/landing/arrow.png");
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  position: absolute;
+                  top: 0.1rem;
+                  right: -0.5rem;
+                }
+              }
+
+              &::before{
+                width: 3rem;
+                height: 3rem;
+                padding: 0.2rem;
+                background-color: $black;
+                background-image: none;
+                @include border-radius(3rem);
+                top: -0.3rem;
+                z-index: 0;
+              }
+            }
+          }
+        }
+
+        .user-contents{
+          width: 100%;
+          height: auto;
+          min-height: 20rem;
+
+          > .table-row{
+            width: 100%;
+            display: block;
+            height: 8rem;
+            margin-bottom: 1rem;
+            @include clearfix;
+
+            > div{
+              display: block;
+              width: 48%;
+              height: 100%;
+              margin-right: 4%;
+              text-align: center;
+              float: left;
+
+              a {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                background-color: rgba($grey, 0.05);
+                @include border-radius(1rem);
+                text-align: center;
+                font-size: 0.8rem;
+                padding-top: 1.2rem;
+                @include small-caps;
+                color: rgba($black, 0.8);
+                letter-spacing: 0.05rem;
+
+                > span{
+                  display: inline-block;
+                  width: 100%;
+                  text-align: center;
+
+                  &:last-of-type{
+                    display: block;
+                  }
+                }
+
+                > .icon{
+                  width: 4rem;
+                  height: 4rem;
+                  text-align: center;
+                  padding: 1rem;
+                  background-color: $yellow;
+                  @include border-radius(3rem);
+                  margin-bottom: 0.5rem;
+
+                  img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+
+              &:last-of-type{
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.profile {
+    @extend %app-view;
+
+    > header {
+    }
+
+    > .scroller{
+      > section {
+        width: inherit;
+        padding: 1rem;
+
+        > picture{
+          display: block;
+          height: auto;
+          min-height: 7rem;
+          text-align: center;
+          position: relative;
+
+          img{
+            width: 6rem;
+            height: 6rem;
+            background-color: rgba($grey, 0.02);
+            border: 1px solid rgba($grey, 0.1);
+            @include border-radius(10rem);
+          }
+        }
+
+        > header{
+          text-align: center;
+          background-color: rgba($grey, 0.05);
+          padding: 1rem 0.3rem;
+          @include border-radius(1rem);
+          margin-bottom: 1rem;
+
+          h3{
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-weight: normal;
+            @include zero-padding-margin;
+          }
+
+          h5{
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 0.8rem;
+            letter-spacing: 0.05rem;
+            @include zero-padding-margin;
+            margin-top: 0.4rem;
+            color: rgba($black, 0.7);
+          }
+        }
+
+        .list-icon{
+          @extend %list-icon;
+        }
+
+        > ul{
+          list-style-type: none;
+          @include zero-padding-margin;
+          background-color: rgba($grey, 0.05);
+          padding: 1rem;
+          @include border-radius(1rem);
+
+          li{
+            @include zero-padding-margin;
+            margin-bottom: 0.1rem;
+
+            p{
+              display: inline-block;
+              width: auto;
+
+              span{
+                display: block;
+
+                &:first-of-type{
+                  position: relative;
+                  top: 0.2rem;
+                  font-size: 0.9rem;
+                }
+
+                &:last-of-type{
+                  color: rgba($grey, 0.6);
+                  font-size: 0.7rem;
+                  top: 0.2rem;
+                  position: relative;
+                }
+              }
+            }
+          }
+        }
+
+        > .summary{
+          background-color: rgba($grey, 0.05);
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          @include border-radius(1rem);
+          @include clearfix;
+
+          > div{
+            width: 33%;
+            float: left;
+            text-align: center;
+            border-left: 1px solid rgba($grey, 0.05);
+
+            .list-icon{
+              width: 3.2rem;
+              height: 3.2rem;
+              margin: 0;
+            }
+
+            h3, h5{
+              font-weight: normal;
+              @include zero-padding-margin;
+              padding-top: 0.3rem;
+            }
+
+            h3{
+              letter-spacing: 0.12rem;
+              font-size: 1.6rem;
+              padding-top: 0.7rem;
+              color: rgba($black, 0.7);
+            }
+
+            h5{
+              @include small-caps;
+              font-size: 0.7rem;
+              color: rgba($grey, 0.8);
+            }
+
+            &:first-of-type{
+              border-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.contacts-list{
+    @extend %app-view;
+
+    > header {
+    }
+
+    > .scroller {
+      > section {
+        width: inherit;
+        padding: 1rem;
+      }
+    }
+  }
+
+}
+

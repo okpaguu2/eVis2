@@ -1,0 +1,45 @@
+<ion-view title="{{$ctrl.title}}">
+    <article class="main-view dashboard">
+        <app-header page-title="{{$ctrl.title}}" left-icon=""/>
+        <div class="scroller">
+            <section>
+                <h2 class="newinspection-header">
+                    SCAN REG. NO. TO START
+                </h2>
+                <div class="row">
+                    <div class="col col-80 col-offset-10">
+                        <div class="photo-wrapper">
+                            <i class="icon ion-social-instagram-outline f-7x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <br>
+                        <h5>- OR ENTER MANUALLY -</h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-80 col-offset-10">
+                        <form class="form" action="#" method="post">
+                            <div class="inner-addon right-addon">
+                                <i class="icon ion-android-car f-2x"></i>
+                                <input type="text" class="form-control input-lg" id="carRegNo"
+                                       placeholder="Enter Car Reg No"/>
+                            </div>
+                            <a ui-sref="outstandingpenalty"
+                               class="button button-dark button-evis button-block icon-right ion-android-arrow-forward">GET
+                                STARTED</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-80 col-offset-10 text-center">
+                        <p>Having issues? <u>Contact Admin</u></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+</ion-view>

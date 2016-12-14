@@ -1,0 +1,37 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-content has-bouncing="false" scroll="false">
+            <aside class="sort-popup" role="search">
+        <nav role="navigation" class="scroller">
+            <header>
+                <span class="close-icon"><a href="#" title="close"><img src="/images/camera/cancel-icon.png"
+                                                                        title="close-icon"/></a> </span>
+                <span class="sort-icon"><a href="#" title="close"><img src="images/inspections/sort-icon.png"
+                                                                       title="sort-icon"/></a> </span>
+            </header>
+            <h4><span>&#9679;</span> Sort Tickets</h4>
+            <ul>
+                <li><a href="#" id="last_7">Last 7 Days</a></li>
+                <li><a href="#" id="last_30">Last 30 Days</a></li>
+                <li><a href="#" id="last_quarter">Last Quarter</a></li>
+                <li><a href="#" id="last_two_quarter">Last 2 Quarters</a></li>
+                <li><a href="#" id="last_year">Last Year</a></li>
+                <li><a href="#" id="set_duration" class="drop-down">Set Duration</a></li>
+            </ul>
+        </nav>
+    </aside>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>

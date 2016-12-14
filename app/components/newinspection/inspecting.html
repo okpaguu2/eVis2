@@ -1,0 +1,63 @@
+<ion-view>
+    <article class="main-view dashboard">
+        <app-header page-title="Inspecting" left-icon=""/>
+        <div class="scroller">
+            <section>
+                <header>
+                    <h4>Outstanding Penalty</h4>
+                </header>
+                <div class="user-contents">
+                    <div class="table-row">
+                        <div>
+                            <a ui-sref="vehicleidentification" id="profile">
+                                <span class="icon bg-black"><img src="images/inspection/active/identification-icon.png" title="identification"/></span>
+                                <span>IDENTIFICATION</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a ui-sref="lightings" id="notifications">
+                                <span class="icon bg-gray">
+                                    <img src="images/inspection/idle/lightings-icon.png"
+                                                        title="lightings"/></span>
+                                <span>LIGHTINGS</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div>
+                            <a ui-sref="inspecting" id="inspections">
+                            <span class="icon bg-gray"><img src="images/inspection/idle/steering-icon.png"
+                                                    title="inspections"/></span>
+                                <span>STEERINGING</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a ui-sref="inspecting" id="new_inspection">
+                            <span class="icon bg-gray"><img src="images/inspection/idle/chasis-icon.png"
+                                                    title="new inspection"/></span>
+                                <span>CHASIS</span>
+                            </a>
+                        </div>      
+                    </div>
+                    <div class="table-row">
+                        <div>
+                            <a ui-sref="inspecting" id="ticket_issued">
+                            <span class="icon bg-gray"><img src="images/inspection/idle/pollution-icon.png"
+                                                    title="ticket issued"/></span>
+                                <span>POLLUTANT EMISSION</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a ui-sref="inspecting" id="emergency">
+                                <span class="icon bg-gray"><img src="images/inspection/idle/visibility-icon.png"
+                                                        title="emergency"/></span>
+                                <span>VISIBILITY</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </article>
+</ion-view>

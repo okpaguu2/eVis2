@@ -1,0 +1,28 @@
+<ion-view>
+    <article class="main-view dashboard tickets">
+        <app-header page-title="Tickets Issued" left-icon=""/>
+        <div class="scroller">
+            <section>
+                <header>
+                    <h4>Total Tickets Issued</h4>
+                </header>
+                <div class="outstanding-wrapper div-rounded card text-left" ng-repeat="ticket in $ctrl.issuedTickets">
+                    <div class="row">
+                        <div class="col col-60 divider">
+                            <span class="text-light text-sm uppercase block">amount</span>
+                            <span class="fa-2x">&#x20a6{{ticket.amount | number}}</span>
+                            <span class="text-light text-sm uppercase block">
+                                #{{ticket.ticketNo}}
+                            </span>
+                        </div>
+                        <div class="col col-40">
+                            <span class="text-light text-sm uppercase block">to</span>
+                            <span class="uppercase strong">{{ticket.issuedTo}}</span>
+                            <span class="text-light text-sm uppercase block">{{ticket.car}}<br/>{{ticket.regNo}}</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+</ion-view>

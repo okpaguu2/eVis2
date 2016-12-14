@@ -1,0 +1,128 @@
+angular.module('eVis.routes', ['ui.router'])
+
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('main', {
+                url: '/main',
+                templateUrl: 'app/views/sidemenu_main.html',
+                abstract: true
+            })
+
+            /**
+             * My newinspection
+             */
+
+            /*
+            .state('myinspections', {
+                url: '/myinspections.home',
+                abstract: true,
+                templateUrl: 'app/components/myinspections/myinspections-search.html'
+            })
+
+            .state('myinspections.list', {
+                url: '/myinspections',
+                views: {
+                    "menuContent": {
+                        template: '<my-newinspection></my-newinspection>'
+                    }
+                }
+            })
+            */
+
+            .state('myinspections', {
+                url: '/myinspections',
+                template: '<my-newinspection></my-newinspection>'
+            })
+
+            .state('newinspection', {
+                url: '/newinspection',
+                template: '<new-inspection></new-inspection>'
+            })
+
+<<<<<<< HEAD
+            .state('newinspection-form', {
+                url: '/newinspection-form',
+                template: '<new-inspection-form></new-inspection-form>'
+=======
+            .state('outstandingpenalty', {
+                url: '/outstandingpenalty',
+                template: '<outstanding-penalty></outstanding-penalty>'
+>>>>>>> 6cf11f1b3cdafb875d336ab92b3536850aab85fc
+            })
+
+            .state('inspections_side', {
+                url: '/inspections_side',
+                templateUrl: 'app/views/sidemenu_inspections.html',
+                abstract: true
+            })
+
+            .state('tickets', {
+                url: '/tickets',
+                templateUrl: 'app/views/sidemenu_tickets.html',
+                abstract: true
+            })
+
+            //Dashboard
+            .state('dashboard', {
+                url: '/dashboard',
+                template: '<dashboard dash-content="This is what to display"></dashboard>'
+            })
+
+
+            .state('reset', {
+                url: '/login/reset/',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'app/login/reset.html',
+                        controller: 'eVisGuestCtrl'
+                    }
+                }
+            })
+
+
+            .state('changePassword', {
+                url: '/login/changePassword/',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'app/login/changePassword.html',
+                        controller: 'eVisGuestCtrl'
+                    }
+                }
+            })
+
+
+            .state('profile', {
+                url: '/profile',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'app/login/profile.html',
+                        controller: 'eVisMainCtrl'
+                    }
+                }
+            })
+
+
+            .state('login', {
+                url: '/login',
+                templateUrl: 'app/login/login.html',
+                controller: 'eVisMainCtrl'
+            })
+
+
+            .state('enterpin', {
+                url: '/enterpin',
+                templateUrl: 'app/login/enterpin.html',
+                controller: 'eVisMainCtrl'
+            })
+
+
+            .state('intro', {
+                url: '/intro',
+                templateUrl: 'app/intro/getstarted.html',
+                controller: 'eVisMainCtrl'
+            })
+
+        $urlRouterProvider.otherwise('/intro')
+
+    })
+

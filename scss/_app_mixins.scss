@@ -1,0 +1,30 @@
+@import "compass";
+
+@mixin small-caps(){
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+@mixin zero-padding-margin{
+  padding: 0;
+  margin: 0;
+}
+
+@mixin center-vertical($position: relative) {
+  position: $position;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

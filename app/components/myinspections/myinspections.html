@@ -1,0 +1,42 @@
+<ion-view>
+    <article class="main-view dashboard">
+        <app-header page-title="My Inspections" left-icon=""/>
+        <div class="scroller">
+            <section>
+                <header>
+                    <h4>Ikorodu Road, Ojota</h4>
+                </header>
+                <div class="outstanding-wrapper div-rounded card text-center" ng-repeat="inspection in $ctrl.inspections">
+                    <div class="row row-center">
+                        <div class="col col-20">
+                            <div class="image-frame div-rounded padding" style="background-color: #F4CC6A;">
+                                <img src="images/dashboard/profile-icon.png" style="width:100%;"/>
+                            </div>
+                        </div>
+                        <div class="col col-80">
+                            <div class="row">
+                                <div class="col wrapper-underlined">
+                                    <span class="inspection-name">{{inspection.firstname}} {{inspection.lastname}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="list-head">Contact</span>
+                                    <span class="list-details">{{inspection.phoneNo}}</span>
+                                </div>
+                                <div class="col">
+                                    <span class="list-head">RegNo</span>
+                                    <span class="list-details">{{inspection.regNo}}</span>
+                                </div>
+                                <div class="col">
+                                    <span class="list-head">Car</span>
+                                    <span class="list-details">{{inspection.car}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+</ion-view>

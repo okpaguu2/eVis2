@@ -1,0 +1,54 @@
+<ion-view>
+    <article class="main-view dashboard lightings">
+        <app-header page-title="New Inspection" left-icon=""/>
+        <div class="scroller">
+            <section>
+                <header>
+                    <h4>Lightings</h4>
+                </header>
+                <div class="outstanding-wrapper div-rounded card text-left"
+                     ng-repeat="question in $ctrl.lightingQuestions">
+                    <div class="row row-center">
+                        <div class="col col-80">
+                            <div class="row">
+                                <div class="col wrapper-underlined">
+                                    <span class=""><strong>{{question.question}}</strong></span>
+                                </div>
+                            </div>
+                            <div class="row m-t-10">
+                                <div class="col-60">
+                                    <select class="form-control question-select">
+                                        <option ng-repeat="ans in $ctrl.answers" value="{{ans.code}}">{{ans.label}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-20 text-center">
+                                    <img src="images/new-inspection/save.png" class="showSave full-image-width">
+                                </div>
+                                <div class="col-20 text-center">
+                                    <img src="images/new-inspection/que.png" class="showSave full-image-width">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-20">
+                            <div class="image-frame div-rounded padding" style="background-color: #FFF;">
+                                <img src="images/new-inspection/camera-icon.png" style="width:100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+
+                        <a ui-sref="visibility"
+                           class="button button-dark button-evis button-block icon-right ion-android-arrow-forward">NEXT</a>
+
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+    </article>
+</ion-view>

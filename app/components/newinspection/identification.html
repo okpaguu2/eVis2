@@ -1,0 +1,52 @@
+<ion-view title="{{$ctrl.title}}">
+    <article class="main-view dashboard">
+        <app-header page-title="{{$ctrl.title}}" left-icon=""/>
+        <div class="scroller">
+            <section>
+                <div class="outstanding-wrapper div-rounded card text-left">
+                    <div class="row">
+                        <div class="col">
+                            <div class="">
+                                <div class="row row-center">
+                                    <div class="col col-80">
+                                        <div class="row">
+                                            <div class="col wrapper-underlined">
+                                                <span class="">
+                                                    <strong>Vehicle Registration Certificate</strong>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-20">
+                                        <div class="image-frame div-rounded padding" style="background-color: white;">
+                                            <i class="icon ion-social-instagram-outline fa-3x"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form class="form" action="#" method="post">
+                            <div class="inner-addon right-addon">
+                                <i class="icon ion-android-car f-2x"></i>
+                                <input type="text" class="form-control input-lg" id="carRegNo"
+                                       placeholder="Enter Car Reg No"/>
+                            </div>
+                            <a ui-sref="outstandingpenalty"
+                               class="button button-dark button-evis button-block icon-right ion-android-arrow-forward">GET
+                                STARTED</a>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+</ion-view>
